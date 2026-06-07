@@ -61,12 +61,13 @@ export function GoogleButton({ onSuccess, isPending }: GoogleButtonProps) {
       });
 
       if (containerRef.current) {
+        const width = containerRef.current.clientWidth || 350;
         window.google.accounts.id.renderButton(containerRef.current, {
           type: "standard",
           theme: "outline",
           size: "large",
           text: "continue_with",
-          width: 400,
+          width,
         });
       }
     }

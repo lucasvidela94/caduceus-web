@@ -58,11 +58,11 @@ function LoginPage() {
 					<div className="absolute -bottom-40 left-1/4 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
 				</div>
 
-				<Card className="w-full max-w-sm border-border/50 shadow-lg shadow-primary/5">
+				<Card className="w-full max-w-md border-border/50 shadow-xl shadow-primary/5">
 					{/* Decorative top bar */}
-					<div className="h-1 w-full rounded-t-xl bg-gradient-to-r from-primary/40 via-primary to-primary/40" />
+					<div className="h-1.5 w-full rounded-t-xl bg-gradient-to-r from-primary/30 via-primary to-primary/30" />
 
-					<CardContent className="px-6 pt-6 pb-8">
+					<CardContent className="px-7 pt-8 pb-6">
 						<div className="mb-7 text-center">
 							<div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 ring-1 ring-primary/10">
 								<GraduationCap className="h-6 w-6 text-primary" />
@@ -135,24 +135,26 @@ function LoginPage() {
 							</Button>
 						</form>
 
-						<div className="relative my-6">
+						<div className="relative my-7">
 							<div className="absolute inset-0 flex items-center">
 								<Separator />
 							</div>
 							<div className="relative flex justify-center text-xs uppercase">
-								<span className="bg-card px-2 text-muted-foreground">o</span>
+								<span className="bg-card px-3 text-muted-foreground/60">o</span>
 							</div>
 						</div>
 
-						<GoogleButton
-							onSuccess={(credential) =>
-								googleLogin.mutate(
-									{ id_token: credential },
-									{ onSuccess: () => router.navigate({ to: "/app" }) },
-								)
-							}
-							isPending={googleLogin.isPending}
-						/>
+						<div className="space-y-3">
+							<GoogleButton
+								onSuccess={(credential) =>
+									googleLogin.mutate(
+										{ id_token: credential },
+										{ onSuccess: () => router.navigate({ to: "/app" }) },
+									)
+								}
+								isPending={googleLogin.isPending}
+							/>
+						</div>
 
 						{googleLogin.error && (
 							<p className="mt-2 rounded-lg bg-destructive/10 px-3 py-2 text-sm text-destructive text-center">
@@ -161,7 +163,7 @@ function LoginPage() {
 						)}
 					</CardContent>
 
-					<div className="border-t border-border/40 px-6 py-4 text-center">
+					<div className="border-t border-border/40 px-7 py-4 text-center">
 						<p className="text-sm text-muted-foreground">
 							¿No tenés cuenta?{" "}
 							<Link
