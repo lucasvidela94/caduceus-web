@@ -61,6 +61,11 @@ function LandingPage() {
                 Ya tengo cuenta
               </Button>
             </Link>
+            <Link to="/como-funciona">
+              <Button variant="ghost" size="lg">
+                Cómo funciona
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

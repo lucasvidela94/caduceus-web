@@ -11,6 +11,12 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         </Link>
         <nav className="flex items-center gap-4">
           <Link
+            to="/como-funciona"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Cómo funciona
+          </Link>
+          <Link
             to="/auth/login"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >

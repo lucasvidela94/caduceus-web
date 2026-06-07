@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ import { Route as AdminPaymentsIdRouteImport } from './routes/admin.payments_.$i
 import { Route as AdminCategoriesNewRouteImport } from './routes/admin.categories_.new'
 import { Route as AdminCategoriesIdRouteImport } from './routes/admin.categories_.$id'
 
+const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
+  id: '/como-funciona',
+  path: '/como-funciona',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
@@ -177,6 +183,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
   '/app': typeof AppRouteWithChildren
+  '/como-funciona': typeof ComoFuncionaRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -204,6 +211,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/como-funciona': typeof ComoFuncionaRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -234,6 +242,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
   '/app': typeof AppRouteWithChildren
+  '/como-funciona': typeof ComoFuncionaRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -265,6 +274,7 @@ export interface FileRouteTypes {
     | '/'
     | '/admin'
     | '/app'
+    | '/como-funciona'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -292,6 +302,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/como-funciona'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -321,6 +332,7 @@ export interface FileRouteTypes {
     | '/'
     | '/admin'
     | '/app'
+    | '/como-funciona'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -351,6 +363,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdminRoute: typeof AdminRouteWithChildren
   AppRoute: typeof AppRouteWithChildren
+  ComoFuncionaRoute: typeof ComoFuncionaRoute
   AuthLoginRoute: typeof AuthLoginRoute
   AuthRegisterRoute: typeof AuthRegisterRoute
   PagoErrorRoute: typeof PagoErrorRoute
@@ -360,6 +373,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/como-funciona': {
+      id: '/como-funciona'
+      path: '/como-funciona'
+      fullPath: '/como-funciona'
+      preLoaderRoute: typeof ComoFuncionaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/app': {
       id: '/app'
       path: '/app'
@@ -610,6 +630,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdminRoute: AdminRouteWithChildren,
   AppRoute: AppRouteWithChildren,
+  ComoFuncionaRoute: ComoFuncionaRoute,
   AuthLoginRoute: AuthLoginRoute,
   AuthRegisterRoute: AuthRegisterRoute,
   PagoErrorRoute: PagoErrorRoute,
