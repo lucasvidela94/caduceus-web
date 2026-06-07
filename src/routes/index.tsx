@@ -116,6 +116,17 @@ function LandingPage() {
 						</Link>
 					</div>
 				</div>
+				<p className="mt-6 text-xs text-muted-foreground/60">
+					Desarrollado por{" "}
+					<a
+						href="https://www.nevex-labs.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="hover:text-foreground transition-colors"
+					>
+						Nevex Labs
+					</a>
+				</p>
 			</footer>
 		</PublicLayout>
 	);

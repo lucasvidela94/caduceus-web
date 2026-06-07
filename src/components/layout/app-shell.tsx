@@ -189,6 +189,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 				<SidebarRail />
 			</Sidebar>
 
+			<div className="fixed bottom-2 left-3 z-50 hidden md:block">
+				<a
+					href="https://www.nevex-labs.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-[10px] text-sidebar-foreground/30 hover:text-sidebar-foreground/60 transition-colors"
+				>
+					Nevex Labs
+				</a>
+			</div>
+
 			<SidebarInset>
 				<header className="flex h-14 items-center gap-3 border-b border-border/40 bg-background/80 px-5 backdrop-blur-sm md:hidden">
 					<SidebarTrigger />
