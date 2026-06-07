@@ -1,41 +1,34 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { PublicLayout } from '#/components/layout/public-layout'
-import { Button } from '#/components/ui/button'
-import {
-  Brain,
-  BarChart3,
-  FolderOpen,
-  Crown,
-  ArrowRight,
-  CheckCircle2,
-} from 'lucide-react'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { PublicLayout } from "#/components/layout/public-layout";
+import { Button } from "#/components/ui/button";
+import { Brain, BarChart3, FolderOpen, Crown, ArrowRight, CheckCircle2 } from "lucide-react";
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute("/")({
   component: LandingPage,
-})
+});
 
 const features = [
   {
     icon: Brain,
-    title: 'Modo práctica',
-    desc: 'Preguntas aleatorias por especialidad con feedback inmediato y explicación detallada.',
+    title: "Modo práctica",
+    desc: "Preguntas aleatorias por especialidad con feedback inmediato y explicación detallada.",
   },
   {
     icon: FolderOpen,
-    title: 'Todas las especialidades',
-    desc: 'Clínica, cardio, neuro, pediatría, cirugía y más. Organizado por categorías.',
+    title: "Todas las especialidades",
+    desc: "Clínica, cardio, neuro, pediatría, cirugía y más. Organizado por categorías.",
   },
   {
     icon: BarChart3,
-    title: 'Estadísticas',
-    desc: 'Seguí tu progreso, aciertos por categoría y evolución en el tiempo.',
+    title: "Estadísticas",
+    desc: "Seguí tu progreso, aciertos por categoría y evolución en el tiempo.",
   },
   {
     icon: Crown,
-    title: 'Banco completo',
-    desc: 'Cientos de preguntas reales de exámenes de residencia desde 2019.',
+    title: "Banco completo",
+    desc: "Cientos de preguntas reales de exámenes de residencia desde 2019.",
   },
-]
+];
 
 function LandingPage() {
   return (
@@ -53,8 +46,8 @@ function LandingPage() {
           </h1>
 
           <p className="mt-6 text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto">
-            Cientos de preguntas reales de exámenes de residencia con feedback
-            inmediato, estadísticas y modo práctica por especialidad.
+            Cientos de preguntas reales de exámenes de residencia con feedback inmediato,
+            estadísticas y modo práctica por especialidad.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -91,5 +84,5 @@ function LandingPage() {
         Caduceo — Preparación para el examen de residencia médica
       </footer>
     </PublicLayout>
-  )
+  );
 }

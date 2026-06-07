@@ -1,26 +1,25 @@
-import { ArrowRight } from 'lucide-react'
-import { Button } from '#/components/ui/button'
-import { Card } from '#/components/ui/card'
-import type { QuizSession } from '#/stores/quiz.store'
+import { ArrowRight } from "lucide-react";
+import { Button } from "#/components/ui/button";
+import { Card } from "#/components/ui/card";
+import type { QuizSession } from "#/stores/quiz.store";
 
 function getStats(session: QuizSession) {
-  const answered = Object.keys(session.answers).length
-  const correct = Object.values(session.answers).filter((a) => a.correct).length
-  const accuracy = answered > 0 ? Math.round((correct / answered) * 100) : 0
-  return { answered, correct, accuracy }
+  const answered = Object.keys(session.answers).length;
+  const correct = Object.values(session.answers).filter((a) => a.correct).length;
+  const accuracy = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+  return { answered, correct, accuracy };
 }
 
 export function ActiveSessionCard({
   session,
   onContinue,
 }: {
-  session: QuizSession
-  onContinue: () => void
+  session: QuizSession;
+  onContinue: () => void;
 }) {
-  const { answered, correct, accuracy } = getStats(session)
-  const progress = session.questions.length > 0
-    ? ((session.currentIndex) / session.questions.length) * 100
-    : 0
+  const { answered, correct, accuracy } = getStats(session);
+  const progress =
+    session.questions.length > 0 ? (session.currentIndex / session.questions.length) * 100 : 0;
 
   return (
     <Card className="overflow-hidden">
@@ -42,7 +41,9 @@ export function ActiveSessionCard({
         <div className="mb-5">
           <div className="mb-1.5 flex justify-between text-sm">
             <span className="text-muted-foreground">Progreso</span>
-            <span className="font-medium">{session.currentIndex} / {session.questions.length}</span>
+            <span className="font-medium">
+              {session.currentIndex} / {session.questions.length}
+            </span>
           </div>
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
             <div
@@ -57,14 +58,22 @@ export function ActiveSessionCard({
         </Button>
       </div>
     </Card>
-  )
+  );
 }
 
-function Stat({ value, label, className }: { value: string | number; label: string; className?: string }) {
+function Stat({
+  value,
+  label,
+  className,
+}: {
+  value: string | number;
+  label: string;
+  className?: string;
+}) {
   return (
     <div className="text-center">
-      <p className={`text-2xl font-bold ${className ?? ''}`}>{value}</p>
+      <p className={`text-2xl font-bold ${className ?? ""}`}>{value}</p>
       <p className="text-xs text-muted-foreground">{label}</p>
     </div>
-  )
+  );
 }

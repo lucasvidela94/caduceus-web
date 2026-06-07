@@ -1,21 +1,21 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { useEffect } from 'react'
-import { useQueryClient } from '@tanstack/react-query'
-import { authKeys } from '#/queries/auth'
-import { Card } from '#/components/ui/card'
-import { Button } from '#/components/ui/button'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { authKeys } from "#/queries/auth";
+import { Card } from "#/components/ui/card";
+import { Button } from "#/components/ui/button";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute('/pago/exito')({
+export const Route = createFileRoute("/pago/exito")({
   component: PaymentSuccess,
-})
+});
 
 function PaymentSuccess() {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   useEffect(() => {
-    queryClient.invalidateQueries({ queryKey: authKeys.session() })
-  }, [queryClient])
+    queryClient.invalidateQueries({ queryKey: authKeys.session() });
+  }, [queryClient]);
 
   return (
     <div className="flex min-h-svh items-center justify-center p-4">
@@ -43,5 +43,5 @@ function PaymentSuccess() {
         </div>
       </Card>
     </div>
-  )
+  );
 }

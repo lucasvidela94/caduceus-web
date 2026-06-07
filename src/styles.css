@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -87,12 +87,12 @@
 
   --sidebar: #f4f6f6;
   --sidebar-foreground: #0f172a;
-  --sidebar-primary: #0A5C6A;
+  --sidebar-primary: #0a5c6a;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #e6f2f4;
-  --sidebar-accent-foreground: #0A5C6A;
+  --sidebar-accent-foreground: #0a5c6a;
   --sidebar-border: #d5dddf;
-  --sidebar-ring: #0A5C6A;
+  --sidebar-ring: #0a5c6a;
 }
 
 .dark {
@@ -149,5 +149,3 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 }
-
-

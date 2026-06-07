@@ -1,0 +1,42 @@
+# SDD Configuration — Caduceo Web
+# Auto-initialized during SDD flow.
+
+project:
+  name: caduceo-web
+  description: Frontend para la plataforma Nevex Quiz. App de preparación para residencia médica con preguntas, progreso y pagos.
+  root: /home/sombi/code/work/nevex/nevex-quiz/caduceus/web
+
+stack:
+  type: frontend
+  framework: react 19
+  router: @tanstack/react-router
+  queries: @tanstack/react-query
+  state: zustand
+  styling: tailwindcss 4 + shadcn/ui (radix-ui)
+  build: vite 8
+  deploy: cloudflare pages (via wrangler)
+  lang: typescript 6
+
+testing:
+  runner: vitest
+  library: @testing-library/react
+  environment: jsdom
+  strict_tdd: false
+
+backend:
+  api_base: /api/v1
+  base_url_dev: http://localhost:3000
+  repo: /home/sombi/code/work/nevex/nevex-quiz/caduceus/api-v2
+
+phase_rules:
+  explore:
+    max_files: 15
+    output: openspec/explore.md
+  proposal:
+    output: openspec/proposal.md
+  spec:
+    output: openspec/spec.md
+  design:
+    output: openspec/design.md
+  tasks:
+    output: openspec/tasks.md

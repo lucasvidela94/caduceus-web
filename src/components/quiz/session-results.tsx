@@ -1,13 +1,32 @@
-import { Button } from '#/components/ui/button'
-import { Card } from '#/components/ui/card'
-import { RotateCcw, BarChart3 } from 'lucide-react'
+import { Button } from "#/components/ui/button";
+import { Card } from "#/components/ui/card";
+import { RotateCcw, BarChart3 } from "lucide-react";
 
 function getInsight(accuracy: number) {
-  if (accuracy === 100) return { title: '¡Perfecto!', text: 'Dominás esta tanda. Aumentá el ritmo y probá con más preguntas.' }
-  if (accuracy >= 80) return { title: '¡Muy bien!', text: 'Seguí así. Repetir ejercicios ayuda a fijar conceptos a largo plazo.' }
-  if (accuracy >= 60) return { title: 'Buen avance', text: 'Revisá las preguntas que tuviste incorrectas para identificar temas que repasar.' }
-  if (accuracy >= 1) return { title: 'Áreas de mejora', text: 'Repasá las explicaciones de las preguntas que fallaste. Cada error te acerca al aprendizaje.' }
-  return { title: 'Primer paso', text: 'Todos empiezan así. Revisá los conceptos y volvé a intentarlo.' }
+  if (accuracy === 100)
+    return {
+      title: "¡Perfecto!",
+      text: "Dominás esta tanda. Aumentá el ritmo y probá con más preguntas.",
+    };
+  if (accuracy >= 80)
+    return {
+      title: "¡Muy bien!",
+      text: "Seguí así. Repetir ejercicios ayuda a fijar conceptos a largo plazo.",
+    };
+  if (accuracy >= 60)
+    return {
+      title: "Buen avance",
+      text: "Revisá las preguntas que tuviste incorrectas para identificar temas que repasar.",
+    };
+  if (accuracy >= 1)
+    return {
+      title: "Áreas de mejora",
+      text: "Repasá las explicaciones de las preguntas que fallaste. Cada error te acerca al aprendizaje.",
+    };
+  return {
+    title: "Primer paso",
+    text: "Todos empiezan así. Revisá los conceptos y volvé a intentarlo.",
+  };
 }
 
 export function SessionResults({
@@ -16,14 +35,14 @@ export function SessionResults({
   onNewPractice,
   onViewProgress,
 }: {
-  correct: number
-  total: number
-  onNewPractice?: () => void
-  onViewProgress?: () => void
+  correct: number;
+  total: number;
+  onNewPractice?: () => void;
+  onViewProgress?: () => void;
 }) {
-  const incorrect = total - correct
-  const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
-  const insight = getInsight(accuracy)
+  const incorrect = total - correct;
+  const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+  const insight = getInsight(accuracy);
 
   return (
     <div className="mx-auto max-w-2xl pt-12 text-center">
@@ -71,5 +90,5 @@ export function SessionResults({
         </div>
       </Card>
     </div>
-  )
+  );
 }

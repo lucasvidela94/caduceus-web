@@ -1,11 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { Card } from '#/components/ui/card'
-import { Button } from '#/components/ui/button'
-import { XCircle, RotateCcw } from 'lucide-react'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Card } from "#/components/ui/card";
+import { Button } from "#/components/ui/button";
+import { XCircle, RotateCcw } from "lucide-react";
 
-export const Route = createFileRoute('/pago/error')({
+export const Route = createFileRoute("/pago/error")({
   component: PaymentError,
-})
+});
 
 function PaymentError() {
   return (
@@ -34,5 +34,5 @@ function PaymentError() {
         </div>
       </Card>
     </div>
-  )
+  );
 }

@@ -1,5 +1,0 @@
-export type { User, AuthResponse } from '#/queries/auth/types'
-export type { Category } from '#/queries/categories/types'
-export type { Question, AnswerResponse } from '#/queries/questions/types'
-export type { Progress } from '#/queries/progress/types'
-export type { PaymentPreference } from '#/queries/payments/types'

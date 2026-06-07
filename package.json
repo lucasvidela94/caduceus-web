@@ -10,10 +10,13 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "format": "biome format",
-    "lint": "biome lint",
+    "format": "npx oxfmt src/",
+    "format:check": "npx oxfmt --check src/",
+    "lint": "npx oxlint",
+    "lint:fix": "npx oxlint --fix",
     "check": "biome check",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.26.0",
