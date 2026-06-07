@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "@tanstack/react-router";
-import { useAdminQuestion, useUpdateAdminQuestion } from "#/queries/admin";
+import { useAdminQuestion, useUpdateAdminQuestion, useAdminCategories } from "#/queries/admin";
 import { Card } from "#/components/ui/card";
 import { Button } from "#/components/ui/button";
 import { Label } from "#/components/ui/label";
@@ -52,6 +52,7 @@ export function AdminEditQuestion() {
   const { id } = useParams({ from: "/admin/questions_/$id" });
   const navigate = useNavigate();
   const { data: question, isLoading } = useAdminQuestion(id);
+  const { data: categories } = useAdminCategories();
   const update = useUpdateAdminQuestion();
   const [form, dispatch] = useReducer(formReducer, initialFormState);
 
@@ -182,15 +183,23 @@ export function AdminEditQuestion() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="categoryId">ID de categoría</Label>
-          <Input
+          <Label htmlFor="categoryId">Categoría</Label>
+          <select
             id="categoryId"
             value={form.categoryId}
             onChange={(e) =>
               dispatch({ type: "SET_FIELD", field: "categoryId", value: e.target.value })
             }
             required
-          />
+            className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0A5C6A]/30"
+          >
+            <option value="">Seleccionar categoría...</option>
+            {categories?.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="flex items-center gap-3">
