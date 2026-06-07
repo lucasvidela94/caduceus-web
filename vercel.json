@@ -8,7 +8,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://accounts.google.com https://www.googletagmanager.com; frame-src 'self' https://accounts.google.com; connect-src 'self' https://api.nevex.io https://nevex-quiz-api.lucasan-videla.workers.dev http://localhost:*; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; base-uri 'self'"
+          "value": "default-src 'self'; script-src 'self' https://accounts.google.com https://www.googletagmanager.com; frame-src 'self' https://accounts.google.com; connect-src 'self' https://api.nevex.io https://nevex-quiz-api.lucasan-videla.workers.dev http://localhost:*; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; base-uri 'self'"
         },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },

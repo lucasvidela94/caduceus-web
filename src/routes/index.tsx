@@ -97,7 +97,7 @@ function LandingPage() {
               className="rounded-xl border bg-card p-6 transition-colors hover:border-primary/20"
             >
               <f.icon className="mb-4 h-8 w-8 text-primary" />
-              <h3 className="mb-2 font-semibold">{f.title}</h3>
+              <h2 className="mb-2 font-semibold text-base">{f.title}</h2>
               <p className="text-sm text-muted-foreground">{f.desc}</p>
             </div>
           ))}

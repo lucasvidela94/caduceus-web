@@ -16,7 +16,7 @@ export function RootErrorComponent({ error }: { error?: Error }) {
     <div className="flex min-h-screen items-center justify-center bg-background p-8">
       <div className="mx-auto max-w-sm text-center">
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-destructive/10">
-          <img src="/logo.png" alt="Caduceo" width={512} height={512} className="h-10 w-auto" />
+          <img src="/logo192.webp" alt="Caduceo" width={192} height={128} className="h-10 w-auto" />
         </div>
         <h1 className="text-xl font-bold tracking-tight">Algo salió mal</h1>
         <p className="mt-2 text-sm text-muted-foreground">

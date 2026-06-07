@@ -45,7 +45,7 @@ export function DashboardPage() {
 
         <Card className="p-5 sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Caduceo" width={512} height={512} className="h-10 w-auto" />
+            <img src="/logo192.webp" alt="Caduceo" width={192} height={128} className="h-10 w-auto" />
             <div>
               <p className="text-2xl font-bold">{categories?.length ?? 0}</p>
               <p className="text-sm text-muted-foreground">Especialidades</p>

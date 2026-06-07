@@ -196,7 +196,7 @@ function ComoFuncionaPage() {
           <div className="rounded-xl border bg-card p-6">
             <div className="flex items-start gap-4">
               <img
-                src="/logo.png"
+                src="/logo192.webp"
                 alt="Caduceo"
                 width={512}
                 height={512}

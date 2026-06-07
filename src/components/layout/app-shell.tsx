@@ -50,7 +50,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <SidebarHeader className="px-5 pt-8 pb-6">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0A5C6A] text-white">
-              <img src="/logo.png" alt="Caduceo" width={512} height={512} className="h-6 w-auto" />
+              <img src="/logo192.webp" alt="" width={192} height={128} className="h-6 w-auto" />
             </div>
             <span className="text-xl font-bold tracking-tight text-sidebar-foreground">
               Caduceo
@@ -188,7 +188,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <header className="flex h-14 items-center gap-3 border-b border-border/40 bg-background/80 px-5 backdrop-blur-sm md:hidden">
           <SidebarTrigger />
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0A5C6A] text-white">
-            <img src="/logo.png" alt="Caduceo" width={512} height={512} className="h-5 w-auto" />
+            <img src="/logo192.webp" alt="" width={192} height={128} className="h-5 w-auto" />
           </div>
           <span className="font-semibold tracking-tight">Caduceo</span>
         </header>
