@@ -1,0 +1,7 @@
+packages:
+  - "."
+onlyBuiltDependencies:
+  - esbuild
+  - lightningcss
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade

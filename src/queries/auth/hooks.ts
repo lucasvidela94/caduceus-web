@@ -1,43 +1,54 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { authKeys } from './keys'
-import { register, login, logout, getSession } from './service'
-import type { RegisterParams, LoginParams } from './types'
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { authKeys } from "./keys";
+import { getSession, login, loginWithGoogle, logout, register } from "./service";
+import type { GoogleLoginParams, LoginParams, RegisterParams } from "./types";
 
 export const useRegister = () => {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (params: RegisterParams) => register(params),
     onSuccess: (data) => {
-      queryClient.setQueryData(authKeys.session(), data.user)
+      queryClient.setQueryData(authKeys.session(), data.user);
     },
-  })
-}
+  });
+};
 
 export const useLogin = () => {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (params: LoginParams) => login(params),
     onSuccess: (data) => {
-      queryClient.setQueryData(authKeys.session(), data.user)
+      queryClient.setQueryData(authKeys.session(), data.user);
     },
-  })
-}
+  });
+};
+
+export const useLoginWithGoogle = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (params: GoogleLoginParams) => loginWithGoogle(params),
+    onSuccess: (data) => {
+      queryClient.setQueryData(authKeys.session(), data.user);
+    },
+  });
+};
 
 export const useLogout = () => {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: logout,
     onSuccess: () => {
-      queryClient.clear()
+      queryClient.clear();
     },
-  })
-}
+  });
+};
 
 export const useSession = () => {
-  const token = localStorage.getItem('caduceo_token')
+  const token = localStorage.getItem("caduceo_token");
 
   return useQuery({
     queryKey: authKeys.session(),
@@ -45,5 +56,5 @@ export const useSession = () => {
     enabled: !!token,
     retry: false,
     staleTime: 5 * 60 * 1000,
-  })
-}
+  });
+};

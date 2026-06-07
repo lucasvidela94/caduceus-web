@@ -1,14 +1,14 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { useCategories } from '#/queries/categories'
-import { Card } from '#/components/ui/card'
-import { FolderOpen, ChevronRight } from 'lucide-react'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useCategories } from "#/queries/categories";
+import { Card } from "#/components/ui/card";
+import { FolderOpen, ChevronRight } from "lucide-react";
 
-export const Route = createFileRoute('/app/categorias')({
+export const Route = createFileRoute("/app/categorias")({
   component: CategoriesPage,
-})
+});
 
 function CategoriesPage() {
-  const { data: categories } = useCategories()
+  const { data: categories } = useCategories();
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
@@ -42,5 +42,5 @@ function CategoriesPage() {
         </div>
       )}
     </div>
-  )
+  );
 }

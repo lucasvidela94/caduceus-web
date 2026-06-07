@@ -1,0 +1,8 @@
+{
+  "ignorePatterns": [
+    "**/openspec/**",
+    "**/*.yaml",
+    "**/*.yml",
+    "**/*.md"
+  ]
+}

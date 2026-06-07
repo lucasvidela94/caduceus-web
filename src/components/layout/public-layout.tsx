@@ -1,5 +1,5 @@
-import { Link } from '@tanstack/react-router'
-import { GraduationCap } from 'lucide-react'
+import { Link } from "@tanstack/react-router";
+import { GraduationCap } from "lucide-react";
 
 export function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,5 +26,5 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main className="flex-1">{children}</main>
     </div>
-  )
+  );
 }

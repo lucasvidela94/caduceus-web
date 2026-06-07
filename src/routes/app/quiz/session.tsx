@@ -1,38 +1,44 @@
-import { createFileRoute, useNavigate } from '@tanstack/react-router'
-import { useQuestions, useAnswerQuestion } from '#/queries/questions'
-import { useQuizStore } from '#/stores/quiz.store'
-import { SessionResults } from '#/components/quiz/session-results'
-import { Button } from '#/components/ui/button'
-import { Card } from '#/components/ui/card'
-import { Progress } from '#/components/ui/progress'
-import { useState, useEffect } from 'react'
-import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react'
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useQuestions, useAnswerQuestion } from "#/queries/questions";
+import { useQuizStore } from "#/stores/quiz.store";
+import { SessionResults } from "#/components/quiz/session-results";
+import { Button } from "#/components/ui/button";
+import { Card } from "#/components/ui/card";
+import { Progress } from "#/components/ui/progress";
+import { useState, useEffect } from "react";
+import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute('/app/quiz/session')({
+export const Route = createFileRoute("/app/quiz/session")({
   component: QuizSession,
-})
+});
 
-const OPTIONS = ['a', 'b', 'c', 'd'] as const
+const OPTIONS = ["a", "b", "c", "d"] as const;
 
 function QuizSession() {
-  const navigate = useNavigate()
-  const session = useQuizStore((s) => s.session)
-  const startSession = useQuizStore((s) => s.startSession)
-  const addAnswer = useQuizStore((s) => s.addAnswer)
-  const goNext = useQuizStore((s) => s.goNext)
-  const completeSession = useQuizStore((s) => s.completeSession)
+  const navigate = useNavigate();
+  const session = useQuizStore((s) => s.session);
+  const startSession = useQuizStore((s) => s.startSession);
+  const addAnswer = useQuizStore((s) => s.addAnswer);
+  const goNext = useQuizStore((s) => s.goNext);
+  const completeSession = useQuizStore((s) => s.completeSession);
 
-  const answer = useAnswerQuestion()
-  const { data: freshQuestions, isLoading, refetch } = useQuestions({ limit: 10 })
+  const answer = useAnswerQuestion();
+  const { data: freshQuestions, isLoading, refetch } = useQuestions({ limit: 10 });
 
-  const [selected, setSelected] = useState<string | null>(null)
-  const [showResult, setShowResult] = useState(false)
+  const [selected, setSelected] = useState<string | null>(null);
+  const [showResult, setShowResult] = useState(false);
 
   useEffect(() => {
     if (freshQuestions && !session) {
-      startSession(freshQuestions)
+      startSession(freshQuestions);
     }
-  }, [freshQuestions, session, startSession])
+  }, [freshQuestions, session, startSession]);
+
+  useEffect(() => {
+    if (!session || (session.questions.length === 0 && !isLoading)) {
+      navigate({ to: "/app/quiz" });
+    }
+  }, [session, isLoading, navigate]);
 
   if (!session || session.questions.length === 0) {
     if (isLoading) {
@@ -42,17 +48,16 @@ function QuizSession() {
             <p className="text-muted-foreground">Cargando preguntas...</p>
           </Card>
         </div>
-      )
+      );
     }
-    navigate({ to: '/app/quiz' })
-    return null
+    return null;
   }
 
-  const { questions, currentIndex, answers } = session
-  const question = questions[currentIndex]
-  const existingAnswer = answers[question?.id]
-  const answeredCount = Object.keys(answers).length
-  const correctCount = Object.values(answers).filter((a) => a.correct).length
+  const { questions, currentIndex, answers } = session;
+  const question = questions[currentIndex];
+  const existingAnswer = answers[question?.id];
+  const answeredCount = Object.keys(answers).length;
+  const correctCount = Object.values(answers).filter((a) => a.correct).length;
 
   if (currentIndex >= questions.length) {
     return (
@@ -60,43 +65,47 @@ function QuizSession() {
         correct={correctCount}
         total={answeredCount}
         onNewPractice={async () => {
-          const result = await refetch()
-          if (result.data) startSession(result.data)
+          const result = await refetch();
+          if (result.data) startSession(result.data);
         }}
-        onViewProgress={() => navigate({ to: '/app/progreso' })}
+        onViewProgress={() => navigate({ to: "/app/progreso" })}
       />
-    )
+    );
   }
 
-  if (!question) return null
+  if (!question) return null;
 
   const handleAnswer = (option: string) => {
-    if (showResult || !question) return
-    setSelected(option)
-    setShowResult(true)
+    if (showResult || !question) return;
+    setSelected(option);
+    setShowResult(true);
     answer.mutate(
       { questionId: question.id, answer: option },
-      { onSuccess: (data) => addAnswer(question.id, data) },
-    )
-  }
+      { onSuccess: (data) => addAnswer(question.id, option, data) },
+    );
+  };
 
   const handleNext = () => {
-    setSelected(null)
-    setShowResult(false)
+    setSelected(null);
+    setShowResult(false);
     if (currentIndex >= questions.length - 1) {
-      completeSession()
+      completeSession();
     } else {
-      goNext()
+      goNext();
     }
-  }
+  };
 
-  const currentCorrectAnswer = existingAnswer?.correctAnswer ?? answer.data?.correct_answer
+  const currentCorrectAnswer = existingAnswer?.correctAnswer ?? answer.data?.correct_answer;
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-[#0A5C6A]">{correctCount}/{answeredCount} correctas</span>
-        <span className="text-sm text-muted-foreground">{currentIndex + 1} de {questions.length}</span>
+        <span className="text-sm font-medium text-[#0A5C6A]">
+          {correctCount}/{answeredCount} correctas
+        </span>
+        <span className="text-sm text-muted-foreground">
+          {currentIndex + 1} de {questions.length}
+        </span>
       </div>
 
       <Progress value={((currentIndex + 1) / questions.length) * 100} className="h-1.5" />
@@ -110,9 +119,9 @@ function QuizSession() {
 
       <div className="space-y-3">
         {OPTIONS.map((opt) => {
-          const isSelected = selected === opt
-          const isCorrect = showResult && currentCorrectAnswer === opt
-          const isWrong = showResult && isSelected && currentCorrectAnswer !== opt
+          const isSelected = selected === opt;
+          const isCorrect = showResult && currentCorrectAnswer === opt;
+          const isWrong = showResult && isSelected && currentCorrectAnswer !== opt;
 
           return (
             <button
@@ -121,21 +130,33 @@ function QuizSession() {
               onClick={() => handleAnswer(opt)}
               disabled={showResult}
               className={`w-full rounded-xl border p-4 text-left transition-all ${
-                isCorrect ? 'border-success bg-success/5' : isWrong ? 'border-destructive bg-destructive/5' : isSelected ? 'border-[#0A5C6A] bg-[#0A5C6A]/5' : 'border-border hover:border-[#0A5C6A]/30 hover:bg-muted/50'
+                isCorrect
+                  ? "border-success bg-success/5"
+                  : isWrong
+                    ? "border-destructive bg-destructive/5"
+                    : isSelected
+                      ? "border-[#0A5C6A] bg-[#0A5C6A]/5"
+                      : "border-border hover:border-[#0A5C6A]/30 hover:bg-muted/50"
               }`}
             >
               <div className="flex items-start gap-3">
                 <span
                   className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-medium ${
-                    isCorrect ? 'bg-success text-success-foreground' : isWrong ? 'bg-destructive text-destructive-foreground' : isSelected ? 'bg-[#0A5C6A] text-white' : 'bg-muted text-muted-foreground'
+                    isCorrect
+                      ? "bg-success text-success-foreground"
+                      : isWrong
+                        ? "bg-destructive text-destructive-foreground"
+                        : isSelected
+                          ? "bg-[#0A5C6A] text-white"
+                          : "bg-muted text-muted-foreground"
                   }`}
                 >
-                  {isCorrect ? '✓' : isWrong ? '✗' : opt.toUpperCase()}
+                  {isCorrect ? "✓" : isWrong ? "✗" : opt.toUpperCase()}
                 </span>
                 <span className="pt-0.5">{question.options[opt]}</span>
               </div>
             </button>
-          )
+          );
         })}
       </div>
 
@@ -143,7 +164,7 @@ function QuizSession() {
         <Card
           className="border-l-4 p-4"
           style={{
-            borderLeftColor: answer.data.correct ? 'var(--success)' : 'var(--destructive)',
+            borderLeftColor: answer.data.correct ? "var(--success)" : "var(--destructive)",
           }}
         >
           <div className="flex items-start gap-3">
@@ -155,7 +176,7 @@ function QuizSession() {
             <div>
               <p className="font-medium">
                 {answer.data.correct
-                  ? '¡Correcto!'
+                  ? "¡Correcto!"
                   : `Incorrecto — La respuesta era ${currentCorrectAnswer?.toUpperCase()}`}
               </p>
               <p className="mt-2 text-sm text-muted-foreground">{answer.data.explanation}</p>
@@ -166,10 +187,10 @@ function QuizSession() {
 
       {showResult && (
         <Button onClick={handleNext} className="w-full gap-2">
-          {currentIndex >= questions.length - 1 ? 'Ver resultados' : 'Siguiente'}
+          {currentIndex >= questions.length - 1 ? "Ver resultados" : "Siguiente"}
           <ArrowRight className="h-4 w-4" />
         </Button>
       )}
     </div>
-  )
+  );
 }

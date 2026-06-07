@@ -1,6 +1,6 @@
-import { api } from '#/lib/api'
-import type { Category } from './types'
+import { api } from "#/lib/api";
+import type { Category } from "./types";
 
 export const getCategories = async (): Promise<Category[]> => {
-  return api.get<Category[]>('/api/v1/categories')
-}
+  return api.get<Category[]>("/api/v1/categories");
+};
