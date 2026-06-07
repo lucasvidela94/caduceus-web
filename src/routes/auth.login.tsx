@@ -17,6 +17,12 @@ const schema = z.object({
 });
 
 export const Route = createFileRoute("/auth/login")({
+	head: () => ({
+		meta: [
+			{ title: "Ingresá a Caduceo — Preparación para residencia médica" },
+			{ name: "description", content: "Ingresá a tu cuenta de Caduceo para seguir practicando con preguntas reales de examen de residencia médica." },
+		],
+	}),
 	component: LoginPage,
 });
 
@@ -65,7 +71,7 @@ function LoginPage() {
 					<CardContent className="px-7 pt-8 pb-6">
 						<div className="mb-7 text-center">
 							<div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 ring-1 ring-primary/10">
-								<img src="/logo.png" alt="Caduceo" className="h-10 w-auto" />
+								<img src="/logo.png" alt="Caduceo" width={512} height={512} className="h-10 w-auto" />
 							</div>
 							<h1 className="text-xl font-bold tracking-tight">
 								Ingresá a Caduceo

@@ -17,6 +17,12 @@ import {
 import { useState } from "react";
 
 export const Route = createFileRoute("/como-funciona")({
+	head: () => ({
+		meta: [
+			{ title: "Cómo funciona Caduceo — Preguntas reales para residencia médica" },
+			{ name: "description", content: "Conocé cómo funciona Caduceo: preguntas reales de exámenes de residencia, modo práctica por especialidad, estadísticas y más. Gratis." },
+		],
+	}),
 	component: ComoFuncionaPage,
 });
 
@@ -136,7 +142,7 @@ function ComoFuncionaPage() {
 								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
 									{i + 1}
 								</span>
-								<h3 className="font-semibold">{step.title}</h3>
+								<h2 className="font-semibold text-base">{step.title}</h2>
 							</div>
 							<p className="text-sm text-muted-foreground">{step.desc}</p>
 						</div>
@@ -193,7 +199,7 @@ function ComoFuncionaPage() {
 
 					<div className="rounded-xl border bg-card p-6">
 						<div className="flex items-start gap-4">
-							<img src="/logo.png" alt="Caduceo" className="mt-1 h-5 w-auto" />
+							<img src="/logo.png" alt="Caduceo" width={512} height={512} className="mt-1 h-5 w-auto" />
 							<div>
 								<h3 className="font-semibold mb-1">Cobertura actual</h3>
 								<p className="text-sm text-muted-foreground">

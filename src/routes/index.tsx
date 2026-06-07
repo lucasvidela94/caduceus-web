@@ -11,6 +11,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+	head: () => ({
+		meta: [
+			{ title: "Caduceo — Practicá para tu residencia médica" },
+			{ name: "description", content: "Preparate para el examen de residencia médica con cientos de preguntas reales, feedback inmediato y estadísticas detalladas. Gratis." },
+			{ property: "og:title", content: "Caduceo — Practicá para tu residencia médica" },
+			{ property: "og:description", content: "Preparate para el examen de residencia médica gratis con cientos de preguntas reales." },
+		],
+	}),
 	component: LandingPage,
 });
 
