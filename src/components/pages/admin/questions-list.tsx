@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useAdminQuestions, useDeleteAdminQuestion } from "#/queries/admin";
+import { useAdminQuestions, useDeleteAdminQuestion, useAdminCategories } from "#/queries/admin";
 import { Card } from "#/components/ui/card";
 import { Button } from "#/components/ui/button";
 import { Badge } from "#/components/ui/badge";
@@ -7,7 +7,10 @@ import { Plus, Pencil, Trash2, Loader2 } from "lucide-react";
 
 export function AdminQuestionsList() {
   const { data: questions, isLoading } = useAdminQuestions();
+  const { data: categories } = useAdminCategories();
   const deleteQ = useDeleteAdminQuestion();
+
+  const categoryMap = new Map(categories?.map((c) => [c.id, c.name]) ?? []);
 
   const handleDelete = (id: string, body: string) => {
     if (window.confirm(`¿Eliminar "${body.slice(0, 60)}..."?`)) {
@@ -61,9 +64,11 @@ export function AdminQuestionsList() {
                 <tr key={q.id} className="group text-sm transition-colors hover:bg-muted/30">
                   <td className="max-w-xs truncate px-4 py-3 font-medium">{q.body}</td>
                   <td className="px-4 py-3 text-muted-foreground">
-                    <code className="rounded bg-muted px-1.5 py-0.5 text-xs">
-                      {q.category_id.slice(0, 8)}...
-                    </code>
+                    {categoryMap.get(q.category_id) ?? (
+                      <code className="rounded bg-muted px-1.5 py-0.5 text-xs">
+                        {q.category_id.slice(0, 8)}...
+                      </code>
+                    )}
                   </td>
                   <td className="px-4 py-3">
                     <Badge variant={q.tier === 1 ? "default" : "secondary"} className="text-xs">
