@@ -9,6 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TerminosRouteImport } from './routes/terminos'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AdminRouteImport } from './routes/admin'
@@ -38,6 +40,16 @@ import { Route as AdminPaymentsIdRouteImport } from './routes/admin.payments_.$i
 import { Route as AdminCategoriesNewRouteImport } from './routes/admin.categories_.new'
 import { Route as AdminCategoriesIdRouteImport } from './routes/admin.categories_.$id'
 
+const TerminosRoute = TerminosRouteImport.update({
+  id: '/terminos',
+  path: '/terminos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
   id: '/como-funciona',
   path: '/como-funciona',
@@ -184,6 +196,8 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AdminRouteWithChildren
   '/app': typeof AppRouteWithChildren
   '/como-funciona': typeof ComoFuncionaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/terminos': typeof TerminosRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -212,6 +226,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/como-funciona': typeof ComoFuncionaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/terminos': typeof TerminosRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -243,6 +259,8 @@ export interface FileRoutesById {
   '/admin': typeof AdminRouteWithChildren
   '/app': typeof AppRouteWithChildren
   '/como-funciona': typeof ComoFuncionaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/terminos': typeof TerminosRoute
   '/admin/categories': typeof AdminCategoriesRoute
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/questions': typeof AdminQuestionsRoute
@@ -275,6 +293,8 @@ export interface FileRouteTypes {
     | '/admin'
     | '/app'
     | '/como-funciona'
+    | '/privacidad'
+    | '/terminos'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -303,6 +323,8 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/como-funciona'
+    | '/privacidad'
+    | '/terminos'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -333,6 +355,8 @@ export interface FileRouteTypes {
     | '/admin'
     | '/app'
     | '/como-funciona'
+    | '/privacidad'
+    | '/terminos'
     | '/admin/categories'
     | '/admin/payments'
     | '/admin/questions'
@@ -364,6 +388,8 @@ export interface RootRouteChildren {
   AdminRoute: typeof AdminRouteWithChildren
   AppRoute: typeof AppRouteWithChildren
   ComoFuncionaRoute: typeof ComoFuncionaRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  TerminosRoute: typeof TerminosRoute
   AuthLoginRoute: typeof AuthLoginRoute
   AuthRegisterRoute: typeof AuthRegisterRoute
   PagoErrorRoute: typeof PagoErrorRoute
@@ -373,6 +399,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terminos': {
+      id: '/terminos'
+      path: '/terminos'
+      fullPath: '/terminos'
+      preLoaderRoute: typeof TerminosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/como-funciona': {
       id: '/como-funciona'
       path: '/como-funciona'
@@ -631,6 +671,8 @@ const rootRouteChildren: RootRouteChildren = {
   AdminRoute: AdminRouteWithChildren,
   AppRoute: AppRouteWithChildren,
   ComoFuncionaRoute: ComoFuncionaRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  TerminosRoute: TerminosRoute,
   AuthLoginRoute: AuthLoginRoute,
   AuthRegisterRoute: AuthRegisterRoute,
   PagoErrorRoute: PagoErrorRoute,
