@@ -65,7 +65,7 @@ export function RegisterPage() {
 
 	return (
 		<PublicLayout>
-			<div className="relative flex min-h-[calc(100vh-3.5rem)] items-center justify-center overflow-hidden px-4">
+			<div className="relative flex min-h-[calc(100vh-3.5rem)] items-center justify-center overflow-hidden px-4 py-10 md:py-16">
 				{/* Background decoration */}
 				<div className="pointer-events-none absolute inset-0 -z-10">
 					<div className="absolute -top-40 right-1/4 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
