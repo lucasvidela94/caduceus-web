@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { PublicLayout } from "#/components/layout/public-layout";
 import { Button } from "#/components/ui/button";
 import { Separator } from "#/components/ui/separator";
@@ -193,7 +194,7 @@ function ComoFuncionaPage() {
 
 					<div className="rounded-xl border bg-card p-6">
 						<div className="flex items-start gap-4">
-							<GraduationCap className="mt-1 h-5 w-5 shrink-0 text-primary" />
+							<CaduceusIcon size={20} className="mt-1 shrink-0 text-primary" />
 							<div>
 								<h3 className="font-semibold mb-1">Cobertura actual</h3>
 								<p className="text-sm text-muted-foreground">

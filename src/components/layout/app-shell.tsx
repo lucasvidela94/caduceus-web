@@ -1,4 +1,5 @@
 import { Link, useMatchRoute, useRouter } from "@tanstack/react-router";
+import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { useSession, useLogout } from "#/queries/auth";
 import {
 	LayoutDashboard,
@@ -8,7 +9,6 @@ import {
 	Crown,
 	Settings,
 	LogOut,
-	GraduationCap,
 	Shield,
 } from "lucide-react";
 import {
@@ -51,7 +51,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 				<SidebarHeader className="px-5 pt-8 pb-6">
 					<div className="flex items-center gap-3">
 						<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0A5C6A] text-white">
-							<GraduationCap className="h-5 w-5" />
+							<CaduceusIcon size={20} />
 						</div>
 						<span className="text-xl font-bold tracking-tight text-sidebar-foreground">
 							Caduceo
@@ -193,7 +193,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 				<header className="flex h-14 items-center gap-3 border-b border-border/40 bg-background/80 px-5 backdrop-blur-sm md:hidden">
 					<SidebarTrigger />
 					<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0A5C6A] text-white">
-						<GraduationCap className="h-4 w-4" />
+						<CaduceusIcon size={16} />
 					</div>
 					<span className="font-semibold tracking-tight">Caduceo</span>
 				</header>

@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { useSession } from "#/queries/auth";
 import { useProgress } from "#/queries/progress";
 import { useCategories } from "#/queries/categories";
 import { Card } from "#/components/ui/card";
 import { Button } from "#/components/ui/button";
-import { Brain, BarChart3, ArrowRight, GraduationCap } from "lucide-react";
+import { Brain, BarChart3, ArrowRight } from "lucide-react";
 
 export function DashboardPage() {
   const { data: user } = useSession();
@@ -45,7 +46,7 @@ export function DashboardPage() {
 
         <Card className="p-5 sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <GraduationCap className="h-8 w-8 text-primary" />
+            <CaduceusIcon size={32} className="text-primary" />
             <div>
               <p className="text-2xl font-bold">{categories?.length ?? 0}</p>
               <p className="text-sm text-muted-foreground">Especialidades</p>
