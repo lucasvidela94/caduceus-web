@@ -8,622 +8,622 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as TerminosRouteImport } from './routes/terminos'
-import { Route as PrivacidadRouteImport } from './routes/privacidad'
-import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
-import { Route as AppRouteImport } from './routes/app'
-import { Route as AdminRouteImport } from './routes/admin'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AppIndexRouteImport } from './routes/app.index'
-import { Route as AdminIndexRouteImport } from './routes/admin.index'
-import { Route as PagoPendienteRouteImport } from './routes/pago.pendiente'
-import { Route as PagoExitoRouteImport } from './routes/pago.exito'
-import { Route as PagoErrorRouteImport } from './routes/pago.error'
-import { Route as AuthRegisterRouteImport } from './routes/auth.register'
-import { Route as AuthLoginRouteImport } from './routes/auth.login'
-import { Route as AppProgresoRouteImport } from './routes/app.progreso'
-import { Route as AppPlusRouteImport } from './routes/app.plus'
-import { Route as AppCategoriasRouteImport } from './routes/app.categorias'
-import { Route as AppAjustesRouteImport } from './routes/app.ajustes'
-import { Route as AdminUsersRouteImport } from './routes/admin.users'
-import { Route as AdminQuestionsRouteImport } from './routes/admin.questions'
-import { Route as AdminPaymentsRouteImport } from './routes/admin.payments'
-import { Route as AdminCategoriesRouteImport } from './routes/admin.categories'
-import { Route as AppQuizIndexRouteImport } from './routes/app/quiz/index'
-import { Route as AppQuizSessionRouteImport } from './routes/app/quiz/session'
-import { Route as AppQuestionsIdRouteImport } from './routes/app/questions.$id'
-import { Route as AdminUsersIdRouteImport } from './routes/admin.users_.$id'
-import { Route as AdminQuestionsNewRouteImport } from './routes/admin.questions_.new'
-import { Route as AdminQuestionsIdRouteImport } from './routes/admin.questions_.$id'
-import { Route as AdminPaymentsIdRouteImport } from './routes/admin.payments_.$id'
-import { Route as AdminCategoriesNewRouteImport } from './routes/admin.categories_.new'
-import { Route as AdminCategoriesIdRouteImport } from './routes/admin.categories_.$id'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as TerminosRouteImport } from "./routes/terminos";
+import { Route as PrivacidadRouteImport } from "./routes/privacidad";
+import { Route as ComoFuncionaRouteImport } from "./routes/como-funciona";
+import { Route as AppRouteImport } from "./routes/app";
+import { Route as AdminRouteImport } from "./routes/admin";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as AppIndexRouteImport } from "./routes/app.index";
+import { Route as AdminIndexRouteImport } from "./routes/admin.index";
+import { Route as PagoPendienteRouteImport } from "./routes/pago.pendiente";
+import { Route as PagoExitoRouteImport } from "./routes/pago.exito";
+import { Route as PagoErrorRouteImport } from "./routes/pago.error";
+import { Route as AuthRegisterRouteImport } from "./routes/auth.register";
+import { Route as AuthLoginRouteImport } from "./routes/auth.login";
+import { Route as AppProgresoRouteImport } from "./routes/app.progreso";
+import { Route as AppPlusRouteImport } from "./routes/app.plus";
+import { Route as AppCategoriasRouteImport } from "./routes/app.categorias";
+import { Route as AppAjustesRouteImport } from "./routes/app.ajustes";
+import { Route as AdminUsersRouteImport } from "./routes/admin.users";
+import { Route as AdminQuestionsRouteImport } from "./routes/admin.questions";
+import { Route as AdminPaymentsRouteImport } from "./routes/admin.payments";
+import { Route as AdminCategoriesRouteImport } from "./routes/admin.categories";
+import { Route as AppQuizIndexRouteImport } from "./routes/app/quiz/index";
+import { Route as AppQuizSessionRouteImport } from "./routes/app/quiz/session";
+import { Route as AppQuestionsIdRouteImport } from "./routes/app/questions.$id";
+import { Route as AdminUsersIdRouteImport } from "./routes/admin.users_.$id";
+import { Route as AdminQuestionsNewRouteImport } from "./routes/admin.questions_.new";
+import { Route as AdminQuestionsIdRouteImport } from "./routes/admin.questions_.$id";
+import { Route as AdminPaymentsIdRouteImport } from "./routes/admin.payments_.$id";
+import { Route as AdminCategoriesNewRouteImport } from "./routes/admin.categories_.new";
+import { Route as AdminCategoriesIdRouteImport } from "./routes/admin.categories_.$id";
 
 const TerminosRoute = TerminosRouteImport.update({
-  id: '/terminos',
-  path: '/terminos',
+  id: "/terminos",
+  path: "/terminos",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const PrivacidadRoute = PrivacidadRouteImport.update({
-  id: '/privacidad',
-  path: '/privacidad',
+  id: "/privacidad",
+  path: "/privacidad",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
-  id: '/como-funciona',
-  path: '/como-funciona',
+  id: "/como-funciona",
+  path: "/como-funciona",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AppRoute = AppRouteImport.update({
-  id: '/app',
-  path: '/app',
+  id: "/app",
+  path: "/app",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AdminRoute = AdminRouteImport.update({
-  id: '/admin',
-  path: '/admin',
+  id: "/admin",
+  path: "/admin",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AppIndexRoute = AppIndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AdminIndexRoute = AdminIndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const PagoPendienteRoute = PagoPendienteRouteImport.update({
-  id: '/pago/pendiente',
-  path: '/pago/pendiente',
+  id: "/pago/pendiente",
+  path: "/pago/pendiente",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const PagoExitoRoute = PagoExitoRouteImport.update({
-  id: '/pago/exito',
-  path: '/pago/exito',
+  id: "/pago/exito",
+  path: "/pago/exito",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const PagoErrorRoute = PagoErrorRouteImport.update({
-  id: '/pago/error',
-  path: '/pago/error',
+  id: "/pago/error",
+  path: "/pago/error",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AuthRegisterRoute = AuthRegisterRouteImport.update({
-  id: '/auth/register',
-  path: '/auth/register',
+  id: "/auth/register",
+  path: "/auth/register",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AuthLoginRoute = AuthLoginRouteImport.update({
-  id: '/auth/login',
-  path: '/auth/login',
+  id: "/auth/login",
+  path: "/auth/login",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AppProgresoRoute = AppProgresoRouteImport.update({
-  id: '/progreso',
-  path: '/progreso',
+  id: "/progreso",
+  path: "/progreso",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AppPlusRoute = AppPlusRouteImport.update({
-  id: '/plus',
-  path: '/plus',
+  id: "/plus",
+  path: "/plus",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AppCategoriasRoute = AppCategoriasRouteImport.update({
-  id: '/categorias',
-  path: '/categorias',
+  id: "/categorias",
+  path: "/categorias",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AppAjustesRoute = AppAjustesRouteImport.update({
-  id: '/ajustes',
-  path: '/ajustes',
+  id: "/ajustes",
+  path: "/ajustes",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AdminUsersRoute = AdminUsersRouteImport.update({
-  id: '/users',
-  path: '/users',
+  id: "/users",
+  path: "/users",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminQuestionsRoute = AdminQuestionsRouteImport.update({
-  id: '/questions',
-  path: '/questions',
+  id: "/questions",
+  path: "/questions",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminPaymentsRoute = AdminPaymentsRouteImport.update({
-  id: '/payments',
-  path: '/payments',
+  id: "/payments",
+  path: "/payments",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminCategoriesRoute = AdminCategoriesRouteImport.update({
-  id: '/categories',
-  path: '/categories',
+  id: "/categories",
+  path: "/categories",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AppQuizIndexRoute = AppQuizIndexRouteImport.update({
-  id: '/quiz/',
-  path: '/quiz/',
+  id: "/quiz/",
+  path: "/quiz/",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AppQuizSessionRoute = AppQuizSessionRouteImport.update({
-  id: '/quiz/session',
-  path: '/quiz/session',
+  id: "/quiz/session",
+  path: "/quiz/session",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AppQuestionsIdRoute = AppQuestionsIdRouteImport.update({
-  id: '/questions/$id',
-  path: '/questions/$id',
+  id: "/questions/$id",
+  path: "/questions/$id",
   getParentRoute: () => AppRoute,
-} as any)
+} as any);
 const AdminUsersIdRoute = AdminUsersIdRouteImport.update({
-  id: '/users_/$id',
-  path: '/users/$id',
+  id: "/users_/$id",
+  path: "/users/$id",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminQuestionsNewRoute = AdminQuestionsNewRouteImport.update({
-  id: '/questions_/new',
-  path: '/questions/new',
+  id: "/questions_/new",
+  path: "/questions/new",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminQuestionsIdRoute = AdminQuestionsIdRouteImport.update({
-  id: '/questions_/$id',
-  path: '/questions/$id',
+  id: "/questions_/$id",
+  path: "/questions/$id",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminPaymentsIdRoute = AdminPaymentsIdRouteImport.update({
-  id: '/payments_/$id',
-  path: '/payments/$id',
+  id: "/payments_/$id",
+  path: "/payments/$id",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminCategoriesNewRoute = AdminCategoriesNewRouteImport.update({
-  id: '/categories_/new',
-  path: '/categories/new',
+  id: "/categories_/new",
+  path: "/categories/new",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 const AdminCategoriesIdRoute = AdminCategoriesIdRouteImport.update({
-  id: '/categories_/$id',
-  path: '/categories/$id',
+  id: "/categories_/$id",
+  path: "/categories/$id",
   getParentRoute: () => AdminRoute,
-} as any)
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/admin': typeof AdminRouteWithChildren
-  '/app': typeof AppRouteWithChildren
-  '/como-funciona': typeof ComoFuncionaRoute
-  '/privacidad': typeof PrivacidadRoute
-  '/terminos': typeof TerminosRoute
-  '/admin/categories': typeof AdminCategoriesRoute
-  '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/questions': typeof AdminQuestionsRoute
-  '/admin/users': typeof AdminUsersRoute
-  '/app/ajustes': typeof AppAjustesRoute
-  '/app/categorias': typeof AppCategoriasRoute
-  '/app/plus': typeof AppPlusRoute
-  '/app/progreso': typeof AppProgresoRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/pago/error': typeof PagoErrorRoute
-  '/pago/exito': typeof PagoExitoRoute
-  '/pago/pendiente': typeof PagoPendienteRoute
-  '/admin/': typeof AdminIndexRoute
-  '/app/': typeof AppIndexRoute
-  '/admin/categories/$id': typeof AdminCategoriesIdRoute
-  '/admin/categories/new': typeof AdminCategoriesNewRoute
-  '/admin/payments/$id': typeof AdminPaymentsIdRoute
-  '/admin/questions/$id': typeof AdminQuestionsIdRoute
-  '/admin/questions/new': typeof AdminQuestionsNewRoute
-  '/admin/users/$id': typeof AdminUsersIdRoute
-  '/app/questions/$id': typeof AppQuestionsIdRoute
-  '/app/quiz/session': typeof AppQuizSessionRoute
-  '/app/quiz/': typeof AppQuizIndexRoute
+  "/": typeof IndexRoute;
+  "/admin": typeof AdminRouteWithChildren;
+  "/app": typeof AppRouteWithChildren;
+  "/como-funciona": typeof ComoFuncionaRoute;
+  "/privacidad": typeof PrivacidadRoute;
+  "/terminos": typeof TerminosRoute;
+  "/admin/categories": typeof AdminCategoriesRoute;
+  "/admin/payments": typeof AdminPaymentsRoute;
+  "/admin/questions": typeof AdminQuestionsRoute;
+  "/admin/users": typeof AdminUsersRoute;
+  "/app/ajustes": typeof AppAjustesRoute;
+  "/app/categorias": typeof AppCategoriasRoute;
+  "/app/plus": typeof AppPlusRoute;
+  "/app/progreso": typeof AppProgresoRoute;
+  "/auth/login": typeof AuthLoginRoute;
+  "/auth/register": typeof AuthRegisterRoute;
+  "/pago/error": typeof PagoErrorRoute;
+  "/pago/exito": typeof PagoExitoRoute;
+  "/pago/pendiente": typeof PagoPendienteRoute;
+  "/admin/": typeof AdminIndexRoute;
+  "/app/": typeof AppIndexRoute;
+  "/admin/categories/$id": typeof AdminCategoriesIdRoute;
+  "/admin/categories/new": typeof AdminCategoriesNewRoute;
+  "/admin/payments/$id": typeof AdminPaymentsIdRoute;
+  "/admin/questions/$id": typeof AdminQuestionsIdRoute;
+  "/admin/questions/new": typeof AdminQuestionsNewRoute;
+  "/admin/users/$id": typeof AdminUsersIdRoute;
+  "/app/questions/$id": typeof AppQuestionsIdRoute;
+  "/app/quiz/session": typeof AppQuizSessionRoute;
+  "/app/quiz/": typeof AppQuizIndexRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/como-funciona': typeof ComoFuncionaRoute
-  '/privacidad': typeof PrivacidadRoute
-  '/terminos': typeof TerminosRoute
-  '/admin/categories': typeof AdminCategoriesRoute
-  '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/questions': typeof AdminQuestionsRoute
-  '/admin/users': typeof AdminUsersRoute
-  '/app/ajustes': typeof AppAjustesRoute
-  '/app/categorias': typeof AppCategoriasRoute
-  '/app/plus': typeof AppPlusRoute
-  '/app/progreso': typeof AppProgresoRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/pago/error': typeof PagoErrorRoute
-  '/pago/exito': typeof PagoExitoRoute
-  '/pago/pendiente': typeof PagoPendienteRoute
-  '/admin': typeof AdminIndexRoute
-  '/app': typeof AppIndexRoute
-  '/admin/categories/$id': typeof AdminCategoriesIdRoute
-  '/admin/categories/new': typeof AdminCategoriesNewRoute
-  '/admin/payments/$id': typeof AdminPaymentsIdRoute
-  '/admin/questions/$id': typeof AdminQuestionsIdRoute
-  '/admin/questions/new': typeof AdminQuestionsNewRoute
-  '/admin/users/$id': typeof AdminUsersIdRoute
-  '/app/questions/$id': typeof AppQuestionsIdRoute
-  '/app/quiz/session': typeof AppQuizSessionRoute
-  '/app/quiz': typeof AppQuizIndexRoute
+  "/": typeof IndexRoute;
+  "/como-funciona": typeof ComoFuncionaRoute;
+  "/privacidad": typeof PrivacidadRoute;
+  "/terminos": typeof TerminosRoute;
+  "/admin/categories": typeof AdminCategoriesRoute;
+  "/admin/payments": typeof AdminPaymentsRoute;
+  "/admin/questions": typeof AdminQuestionsRoute;
+  "/admin/users": typeof AdminUsersRoute;
+  "/app/ajustes": typeof AppAjustesRoute;
+  "/app/categorias": typeof AppCategoriasRoute;
+  "/app/plus": typeof AppPlusRoute;
+  "/app/progreso": typeof AppProgresoRoute;
+  "/auth/login": typeof AuthLoginRoute;
+  "/auth/register": typeof AuthRegisterRoute;
+  "/pago/error": typeof PagoErrorRoute;
+  "/pago/exito": typeof PagoExitoRoute;
+  "/pago/pendiente": typeof PagoPendienteRoute;
+  "/admin": typeof AdminIndexRoute;
+  "/app": typeof AppIndexRoute;
+  "/admin/categories/$id": typeof AdminCategoriesIdRoute;
+  "/admin/categories/new": typeof AdminCategoriesNewRoute;
+  "/admin/payments/$id": typeof AdminPaymentsIdRoute;
+  "/admin/questions/$id": typeof AdminQuestionsIdRoute;
+  "/admin/questions/new": typeof AdminQuestionsNewRoute;
+  "/admin/users/$id": typeof AdminUsersIdRoute;
+  "/app/questions/$id": typeof AppQuestionsIdRoute;
+  "/app/quiz/session": typeof AppQuizSessionRoute;
+  "/app/quiz": typeof AppQuizIndexRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/admin': typeof AdminRouteWithChildren
-  '/app': typeof AppRouteWithChildren
-  '/como-funciona': typeof ComoFuncionaRoute
-  '/privacidad': typeof PrivacidadRoute
-  '/terminos': typeof TerminosRoute
-  '/admin/categories': typeof AdminCategoriesRoute
-  '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/questions': typeof AdminQuestionsRoute
-  '/admin/users': typeof AdminUsersRoute
-  '/app/ajustes': typeof AppAjustesRoute
-  '/app/categorias': typeof AppCategoriasRoute
-  '/app/plus': typeof AppPlusRoute
-  '/app/progreso': typeof AppProgresoRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/pago/error': typeof PagoErrorRoute
-  '/pago/exito': typeof PagoExitoRoute
-  '/pago/pendiente': typeof PagoPendienteRoute
-  '/admin/': typeof AdminIndexRoute
-  '/app/': typeof AppIndexRoute
-  '/admin/categories_/$id': typeof AdminCategoriesIdRoute
-  '/admin/categories_/new': typeof AdminCategoriesNewRoute
-  '/admin/payments_/$id': typeof AdminPaymentsIdRoute
-  '/admin/questions_/$id': typeof AdminQuestionsIdRoute
-  '/admin/questions_/new': typeof AdminQuestionsNewRoute
-  '/admin/users_/$id': typeof AdminUsersIdRoute
-  '/app/questions/$id': typeof AppQuestionsIdRoute
-  '/app/quiz/session': typeof AppQuizSessionRoute
-  '/app/quiz/': typeof AppQuizIndexRoute
+  __root__: typeof rootRouteImport;
+  "/": typeof IndexRoute;
+  "/admin": typeof AdminRouteWithChildren;
+  "/app": typeof AppRouteWithChildren;
+  "/como-funciona": typeof ComoFuncionaRoute;
+  "/privacidad": typeof PrivacidadRoute;
+  "/terminos": typeof TerminosRoute;
+  "/admin/categories": typeof AdminCategoriesRoute;
+  "/admin/payments": typeof AdminPaymentsRoute;
+  "/admin/questions": typeof AdminQuestionsRoute;
+  "/admin/users": typeof AdminUsersRoute;
+  "/app/ajustes": typeof AppAjustesRoute;
+  "/app/categorias": typeof AppCategoriasRoute;
+  "/app/plus": typeof AppPlusRoute;
+  "/app/progreso": typeof AppProgresoRoute;
+  "/auth/login": typeof AuthLoginRoute;
+  "/auth/register": typeof AuthRegisterRoute;
+  "/pago/error": typeof PagoErrorRoute;
+  "/pago/exito": typeof PagoExitoRoute;
+  "/pago/pendiente": typeof PagoPendienteRoute;
+  "/admin/": typeof AdminIndexRoute;
+  "/app/": typeof AppIndexRoute;
+  "/admin/categories_/$id": typeof AdminCategoriesIdRoute;
+  "/admin/categories_/new": typeof AdminCategoriesNewRoute;
+  "/admin/payments_/$id": typeof AdminPaymentsIdRoute;
+  "/admin/questions_/$id": typeof AdminQuestionsIdRoute;
+  "/admin/questions_/new": typeof AdminQuestionsNewRoute;
+  "/admin/users_/$id": typeof AdminUsersIdRoute;
+  "/app/questions/$id": typeof AppQuestionsIdRoute;
+  "/app/quiz/session": typeof AppQuizSessionRoute;
+  "/app/quiz/": typeof AppQuizIndexRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
-    | '/'
-    | '/admin'
-    | '/app'
-    | '/como-funciona'
-    | '/privacidad'
-    | '/terminos'
-    | '/admin/categories'
-    | '/admin/payments'
-    | '/admin/questions'
-    | '/admin/users'
-    | '/app/ajustes'
-    | '/app/categorias'
-    | '/app/plus'
-    | '/app/progreso'
-    | '/auth/login'
-    | '/auth/register'
-    | '/pago/error'
-    | '/pago/exito'
-    | '/pago/pendiente'
-    | '/admin/'
-    | '/app/'
-    | '/admin/categories/$id'
-    | '/admin/categories/new'
-    | '/admin/payments/$id'
-    | '/admin/questions/$id'
-    | '/admin/questions/new'
-    | '/admin/users/$id'
-    | '/app/questions/$id'
-    | '/app/quiz/session'
-    | '/app/quiz/'
-  fileRoutesByTo: FileRoutesByTo
+    | "/"
+    | "/admin"
+    | "/app"
+    | "/como-funciona"
+    | "/privacidad"
+    | "/terminos"
+    | "/admin/categories"
+    | "/admin/payments"
+    | "/admin/questions"
+    | "/admin/users"
+    | "/app/ajustes"
+    | "/app/categorias"
+    | "/app/plus"
+    | "/app/progreso"
+    | "/auth/login"
+    | "/auth/register"
+    | "/pago/error"
+    | "/pago/exito"
+    | "/pago/pendiente"
+    | "/admin/"
+    | "/app/"
+    | "/admin/categories/$id"
+    | "/admin/categories/new"
+    | "/admin/payments/$id"
+    | "/admin/questions/$id"
+    | "/admin/questions/new"
+    | "/admin/users/$id"
+    | "/app/questions/$id"
+    | "/app/quiz/session"
+    | "/app/quiz/";
+  fileRoutesByTo: FileRoutesByTo;
   to:
-    | '/'
-    | '/como-funciona'
-    | '/privacidad'
-    | '/terminos'
-    | '/admin/categories'
-    | '/admin/payments'
-    | '/admin/questions'
-    | '/admin/users'
-    | '/app/ajustes'
-    | '/app/categorias'
-    | '/app/plus'
-    | '/app/progreso'
-    | '/auth/login'
-    | '/auth/register'
-    | '/pago/error'
-    | '/pago/exito'
-    | '/pago/pendiente'
-    | '/admin'
-    | '/app'
-    | '/admin/categories/$id'
-    | '/admin/categories/new'
-    | '/admin/payments/$id'
-    | '/admin/questions/$id'
-    | '/admin/questions/new'
-    | '/admin/users/$id'
-    | '/app/questions/$id'
-    | '/app/quiz/session'
-    | '/app/quiz'
+    | "/"
+    | "/como-funciona"
+    | "/privacidad"
+    | "/terminos"
+    | "/admin/categories"
+    | "/admin/payments"
+    | "/admin/questions"
+    | "/admin/users"
+    | "/app/ajustes"
+    | "/app/categorias"
+    | "/app/plus"
+    | "/app/progreso"
+    | "/auth/login"
+    | "/auth/register"
+    | "/pago/error"
+    | "/pago/exito"
+    | "/pago/pendiente"
+    | "/admin"
+    | "/app"
+    | "/admin/categories/$id"
+    | "/admin/categories/new"
+    | "/admin/payments/$id"
+    | "/admin/questions/$id"
+    | "/admin/questions/new"
+    | "/admin/users/$id"
+    | "/app/questions/$id"
+    | "/app/quiz/session"
+    | "/app/quiz";
   id:
-    | '__root__'
-    | '/'
-    | '/admin'
-    | '/app'
-    | '/como-funciona'
-    | '/privacidad'
-    | '/terminos'
-    | '/admin/categories'
-    | '/admin/payments'
-    | '/admin/questions'
-    | '/admin/users'
-    | '/app/ajustes'
-    | '/app/categorias'
-    | '/app/plus'
-    | '/app/progreso'
-    | '/auth/login'
-    | '/auth/register'
-    | '/pago/error'
-    | '/pago/exito'
-    | '/pago/pendiente'
-    | '/admin/'
-    | '/app/'
-    | '/admin/categories_/$id'
-    | '/admin/categories_/new'
-    | '/admin/payments_/$id'
-    | '/admin/questions_/$id'
-    | '/admin/questions_/new'
-    | '/admin/users_/$id'
-    | '/app/questions/$id'
-    | '/app/quiz/session'
-    | '/app/quiz/'
-  fileRoutesById: FileRoutesById
+    | "__root__"
+    | "/"
+    | "/admin"
+    | "/app"
+    | "/como-funciona"
+    | "/privacidad"
+    | "/terminos"
+    | "/admin/categories"
+    | "/admin/payments"
+    | "/admin/questions"
+    | "/admin/users"
+    | "/app/ajustes"
+    | "/app/categorias"
+    | "/app/plus"
+    | "/app/progreso"
+    | "/auth/login"
+    | "/auth/register"
+    | "/pago/error"
+    | "/pago/exito"
+    | "/pago/pendiente"
+    | "/admin/"
+    | "/app/"
+    | "/admin/categories_/$id"
+    | "/admin/categories_/new"
+    | "/admin/payments_/$id"
+    | "/admin/questions_/$id"
+    | "/admin/questions_/new"
+    | "/admin/users_/$id"
+    | "/app/questions/$id"
+    | "/app/quiz/session"
+    | "/app/quiz/";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AdminRoute: typeof AdminRouteWithChildren
-  AppRoute: typeof AppRouteWithChildren
-  ComoFuncionaRoute: typeof ComoFuncionaRoute
-  PrivacidadRoute: typeof PrivacidadRoute
-  TerminosRoute: typeof TerminosRoute
-  AuthLoginRoute: typeof AuthLoginRoute
-  AuthRegisterRoute: typeof AuthRegisterRoute
-  PagoErrorRoute: typeof PagoErrorRoute
-  PagoExitoRoute: typeof PagoExitoRoute
-  PagoPendienteRoute: typeof PagoPendienteRoute
+  IndexRoute: typeof IndexRoute;
+  AdminRoute: typeof AdminRouteWithChildren;
+  AppRoute: typeof AppRouteWithChildren;
+  ComoFuncionaRoute: typeof ComoFuncionaRoute;
+  PrivacidadRoute: typeof PrivacidadRoute;
+  TerminosRoute: typeof TerminosRoute;
+  AuthLoginRoute: typeof AuthLoginRoute;
+  AuthRegisterRoute: typeof AuthRegisterRoute;
+  PagoErrorRoute: typeof PagoErrorRoute;
+  PagoExitoRoute: typeof PagoExitoRoute;
+  PagoPendienteRoute: typeof PagoPendienteRoute;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/terminos': {
-      id: '/terminos'
-      path: '/terminos'
-      fullPath: '/terminos'
-      preLoaderRoute: typeof TerminosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidad': {
-      id: '/privacidad'
-      path: '/privacidad'
-      fullPath: '/privacidad'
-      preLoaderRoute: typeof PrivacidadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/como-funciona': {
-      id: '/como-funciona'
-      path: '/como-funciona'
-      fullPath: '/como-funciona'
-      preLoaderRoute: typeof ComoFuncionaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/app': {
-      id: '/app'
-      path: '/app'
-      fullPath: '/app'
-      preLoaderRoute: typeof AppRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admin': {
-      id: '/admin'
-      path: '/admin'
-      fullPath: '/admin'
-      preLoaderRoute: typeof AdminRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/app/': {
-      id: '/app/'
-      path: '/'
-      fullPath: '/app/'
-      preLoaderRoute: typeof AppIndexRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/admin/': {
-      id: '/admin/'
-      path: '/'
-      fullPath: '/admin/'
-      preLoaderRoute: typeof AdminIndexRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/pago/pendiente': {
-      id: '/pago/pendiente'
-      path: '/pago/pendiente'
-      fullPath: '/pago/pendiente'
-      preLoaderRoute: typeof PagoPendienteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pago/exito': {
-      id: '/pago/exito'
-      path: '/pago/exito'
-      fullPath: '/pago/exito'
-      preLoaderRoute: typeof PagoExitoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pago/error': {
-      id: '/pago/error'
-      path: '/pago/error'
-      fullPath: '/pago/error'
-      preLoaderRoute: typeof PagoErrorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth/register': {
-      id: '/auth/register'
-      path: '/auth/register'
-      fullPath: '/auth/register'
-      preLoaderRoute: typeof AuthRegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth/login': {
-      id: '/auth/login'
-      path: '/auth/login'
-      fullPath: '/auth/login'
-      preLoaderRoute: typeof AuthLoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/app/progreso': {
-      id: '/app/progreso'
-      path: '/progreso'
-      fullPath: '/app/progreso'
-      preLoaderRoute: typeof AppProgresoRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/plus': {
-      id: '/app/plus'
-      path: '/plus'
-      fullPath: '/app/plus'
-      preLoaderRoute: typeof AppPlusRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/categorias': {
-      id: '/app/categorias'
-      path: '/categorias'
-      fullPath: '/app/categorias'
-      preLoaderRoute: typeof AppCategoriasRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/ajustes': {
-      id: '/app/ajustes'
-      path: '/ajustes'
-      fullPath: '/app/ajustes'
-      preLoaderRoute: typeof AppAjustesRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/admin/users': {
-      id: '/admin/users'
-      path: '/users'
-      fullPath: '/admin/users'
-      preLoaderRoute: typeof AdminUsersRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/questions': {
-      id: '/admin/questions'
-      path: '/questions'
-      fullPath: '/admin/questions'
-      preLoaderRoute: typeof AdminQuestionsRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/payments': {
-      id: '/admin/payments'
-      path: '/payments'
-      fullPath: '/admin/payments'
-      preLoaderRoute: typeof AdminPaymentsRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/categories': {
-      id: '/admin/categories'
-      path: '/categories'
-      fullPath: '/admin/categories'
-      preLoaderRoute: typeof AdminCategoriesRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/app/quiz/': {
-      id: '/app/quiz/'
-      path: '/quiz'
-      fullPath: '/app/quiz/'
-      preLoaderRoute: typeof AppQuizIndexRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/quiz/session': {
-      id: '/app/quiz/session'
-      path: '/quiz/session'
-      fullPath: '/app/quiz/session'
-      preLoaderRoute: typeof AppQuizSessionRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/questions/$id': {
-      id: '/app/questions/$id'
-      path: '/questions/$id'
-      fullPath: '/app/questions/$id'
-      preLoaderRoute: typeof AppQuestionsIdRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/admin/users_/$id': {
-      id: '/admin/users_/$id'
-      path: '/users/$id'
-      fullPath: '/admin/users/$id'
-      preLoaderRoute: typeof AdminUsersIdRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/questions_/new': {
-      id: '/admin/questions_/new'
-      path: '/questions/new'
-      fullPath: '/admin/questions/new'
-      preLoaderRoute: typeof AdminQuestionsNewRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/questions_/$id': {
-      id: '/admin/questions_/$id'
-      path: '/questions/$id'
-      fullPath: '/admin/questions/$id'
-      preLoaderRoute: typeof AdminQuestionsIdRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/payments_/$id': {
-      id: '/admin/payments_/$id'
-      path: '/payments/$id'
-      fullPath: '/admin/payments/$id'
-      preLoaderRoute: typeof AdminPaymentsIdRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/categories_/new': {
-      id: '/admin/categories_/new'
-      path: '/categories/new'
-      fullPath: '/admin/categories/new'
-      preLoaderRoute: typeof AdminCategoriesNewRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/categories_/$id': {
-      id: '/admin/categories_/$id'
-      path: '/categories/$id'
-      fullPath: '/admin/categories/$id'
-      preLoaderRoute: typeof AdminCategoriesIdRouteImport
-      parentRoute: typeof AdminRoute
-    }
+    "/terminos": {
+      id: "/terminos";
+      path: "/terminos";
+      fullPath: "/terminos";
+      preLoaderRoute: typeof TerminosRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/privacidad": {
+      id: "/privacidad";
+      path: "/privacidad";
+      fullPath: "/privacidad";
+      preLoaderRoute: typeof PrivacidadRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/como-funciona": {
+      id: "/como-funciona";
+      path: "/como-funciona";
+      fullPath: "/como-funciona";
+      preLoaderRoute: typeof ComoFuncionaRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/app": {
+      id: "/app";
+      path: "/app";
+      fullPath: "/app";
+      preLoaderRoute: typeof AppRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/admin": {
+      id: "/admin";
+      path: "/admin";
+      fullPath: "/admin";
+      preLoaderRoute: typeof AdminRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/app/": {
+      id: "/app/";
+      path: "/";
+      fullPath: "/app/";
+      preLoaderRoute: typeof AppIndexRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/admin/": {
+      id: "/admin/";
+      path: "/";
+      fullPath: "/admin/";
+      preLoaderRoute: typeof AdminIndexRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/pago/pendiente": {
+      id: "/pago/pendiente";
+      path: "/pago/pendiente";
+      fullPath: "/pago/pendiente";
+      preLoaderRoute: typeof PagoPendienteRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/pago/exito": {
+      id: "/pago/exito";
+      path: "/pago/exito";
+      fullPath: "/pago/exito";
+      preLoaderRoute: typeof PagoExitoRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/pago/error": {
+      id: "/pago/error";
+      path: "/pago/error";
+      fullPath: "/pago/error";
+      preLoaderRoute: typeof PagoErrorRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/auth/register": {
+      id: "/auth/register";
+      path: "/auth/register";
+      fullPath: "/auth/register";
+      preLoaderRoute: typeof AuthRegisterRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/auth/login": {
+      id: "/auth/login";
+      path: "/auth/login";
+      fullPath: "/auth/login";
+      preLoaderRoute: typeof AuthLoginRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/app/progreso": {
+      id: "/app/progreso";
+      path: "/progreso";
+      fullPath: "/app/progreso";
+      preLoaderRoute: typeof AppProgresoRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/app/plus": {
+      id: "/app/plus";
+      path: "/plus";
+      fullPath: "/app/plus";
+      preLoaderRoute: typeof AppPlusRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/app/categorias": {
+      id: "/app/categorias";
+      path: "/categorias";
+      fullPath: "/app/categorias";
+      preLoaderRoute: typeof AppCategoriasRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/app/ajustes": {
+      id: "/app/ajustes";
+      path: "/ajustes";
+      fullPath: "/app/ajustes";
+      preLoaderRoute: typeof AppAjustesRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/admin/users": {
+      id: "/admin/users";
+      path: "/users";
+      fullPath: "/admin/users";
+      preLoaderRoute: typeof AdminUsersRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/questions": {
+      id: "/admin/questions";
+      path: "/questions";
+      fullPath: "/admin/questions";
+      preLoaderRoute: typeof AdminQuestionsRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/payments": {
+      id: "/admin/payments";
+      path: "/payments";
+      fullPath: "/admin/payments";
+      preLoaderRoute: typeof AdminPaymentsRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/categories": {
+      id: "/admin/categories";
+      path: "/categories";
+      fullPath: "/admin/categories";
+      preLoaderRoute: typeof AdminCategoriesRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/app/quiz/": {
+      id: "/app/quiz/";
+      path: "/quiz";
+      fullPath: "/app/quiz/";
+      preLoaderRoute: typeof AppQuizIndexRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/app/quiz/session": {
+      id: "/app/quiz/session";
+      path: "/quiz/session";
+      fullPath: "/app/quiz/session";
+      preLoaderRoute: typeof AppQuizSessionRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/app/questions/$id": {
+      id: "/app/questions/$id";
+      path: "/questions/$id";
+      fullPath: "/app/questions/$id";
+      preLoaderRoute: typeof AppQuestionsIdRouteImport;
+      parentRoute: typeof AppRoute;
+    };
+    "/admin/users_/$id": {
+      id: "/admin/users_/$id";
+      path: "/users/$id";
+      fullPath: "/admin/users/$id";
+      preLoaderRoute: typeof AdminUsersIdRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/questions_/new": {
+      id: "/admin/questions_/new";
+      path: "/questions/new";
+      fullPath: "/admin/questions/new";
+      preLoaderRoute: typeof AdminQuestionsNewRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/questions_/$id": {
+      id: "/admin/questions_/$id";
+      path: "/questions/$id";
+      fullPath: "/admin/questions/$id";
+      preLoaderRoute: typeof AdminQuestionsIdRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/payments_/$id": {
+      id: "/admin/payments_/$id";
+      path: "/payments/$id";
+      fullPath: "/admin/payments/$id";
+      preLoaderRoute: typeof AdminPaymentsIdRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/categories_/new": {
+      id: "/admin/categories_/new";
+      path: "/categories/new";
+      fullPath: "/admin/categories/new";
+      preLoaderRoute: typeof AdminCategoriesNewRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
+    "/admin/categories_/$id": {
+      id: "/admin/categories_/$id";
+      path: "/categories/$id";
+      fullPath: "/admin/categories/$id";
+      preLoaderRoute: typeof AdminCategoriesIdRouteImport;
+      parentRoute: typeof AdminRoute;
+    };
   }
 }
 
 interface AdminRouteChildren {
-  AdminCategoriesRoute: typeof AdminCategoriesRoute
-  AdminPaymentsRoute: typeof AdminPaymentsRoute
-  AdminQuestionsRoute: typeof AdminQuestionsRoute
-  AdminUsersRoute: typeof AdminUsersRoute
-  AdminIndexRoute: typeof AdminIndexRoute
-  AdminCategoriesIdRoute: typeof AdminCategoriesIdRoute
-  AdminCategoriesNewRoute: typeof AdminCategoriesNewRoute
-  AdminPaymentsIdRoute: typeof AdminPaymentsIdRoute
-  AdminQuestionsIdRoute: typeof AdminQuestionsIdRoute
-  AdminQuestionsNewRoute: typeof AdminQuestionsNewRoute
-  AdminUsersIdRoute: typeof AdminUsersIdRoute
+  AdminCategoriesRoute: typeof AdminCategoriesRoute;
+  AdminPaymentsRoute: typeof AdminPaymentsRoute;
+  AdminQuestionsRoute: typeof AdminQuestionsRoute;
+  AdminUsersRoute: typeof AdminUsersRoute;
+  AdminIndexRoute: typeof AdminIndexRoute;
+  AdminCategoriesIdRoute: typeof AdminCategoriesIdRoute;
+  AdminCategoriesNewRoute: typeof AdminCategoriesNewRoute;
+  AdminPaymentsIdRoute: typeof AdminPaymentsIdRoute;
+  AdminQuestionsIdRoute: typeof AdminQuestionsIdRoute;
+  AdminQuestionsNewRoute: typeof AdminQuestionsNewRoute;
+  AdminUsersIdRoute: typeof AdminUsersIdRoute;
 }
 
 const AdminRouteChildren: AdminRouteChildren = {
@@ -638,19 +638,19 @@ const AdminRouteChildren: AdminRouteChildren = {
   AdminQuestionsIdRoute: AdminQuestionsIdRoute,
   AdminQuestionsNewRoute: AdminQuestionsNewRoute,
   AdminUsersIdRoute: AdminUsersIdRoute,
-}
+};
 
-const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren);
 
 interface AppRouteChildren {
-  AppAjustesRoute: typeof AppAjustesRoute
-  AppCategoriasRoute: typeof AppCategoriasRoute
-  AppPlusRoute: typeof AppPlusRoute
-  AppProgresoRoute: typeof AppProgresoRoute
-  AppIndexRoute: typeof AppIndexRoute
-  AppQuestionsIdRoute: typeof AppQuestionsIdRoute
-  AppQuizSessionRoute: typeof AppQuizSessionRoute
-  AppQuizIndexRoute: typeof AppQuizIndexRoute
+  AppAjustesRoute: typeof AppAjustesRoute;
+  AppCategoriasRoute: typeof AppCategoriasRoute;
+  AppPlusRoute: typeof AppPlusRoute;
+  AppProgresoRoute: typeof AppProgresoRoute;
+  AppIndexRoute: typeof AppIndexRoute;
+  AppQuestionsIdRoute: typeof AppQuestionsIdRoute;
+  AppQuizSessionRoute: typeof AppQuizSessionRoute;
+  AppQuizIndexRoute: typeof AppQuizIndexRoute;
 }
 
 const AppRouteChildren: AppRouteChildren = {
@@ -662,9 +662,9 @@ const AppRouteChildren: AppRouteChildren = {
   AppQuestionsIdRoute: AppQuestionsIdRoute,
   AppQuizSessionRoute: AppQuizSessionRoute,
   AppQuizIndexRoute: AppQuizIndexRoute,
-}
+};
 
-const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren);
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -678,7 +678,7 @@ const rootRouteChildren: RootRouteChildren = {
   PagoErrorRoute: PagoErrorRoute,
   PagoExitoRoute: PagoExitoRoute,
   PagoPendienteRoute: PagoPendienteRoute,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
