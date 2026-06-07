@@ -253,19 +253,25 @@ function ComoFuncionaPage() {
 			</section>
 
 			{/* Footer */}
-      <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-        <div className="mx-auto max-w-6xl px-4">
-          <p>Caduceo — Preparación para el examen de residencia médica</p>
-          <div className="mt-3 flex flex-wrap justify-center gap-4">
-            <Link to="/privacidad" className="hover:text-foreground transition-colors">
-              Política de Privacidad
-            </Link>
-            <Link to="/terminos" className="hover:text-foreground transition-colors">
-              Términos del Servicio
-            </Link>
-          </div>
-        </div>
-      </footer>
+			<footer className="border-t py-8 text-center text-sm text-muted-foreground">
+				<div className="mx-auto max-w-6xl px-4">
+					<p>Caduceo — Preparación para el examen de residencia médica</p>
+					<div className="mt-3 flex flex-wrap justify-center gap-4">
+						<Link
+							to="/privacidad"
+							className="hover:text-foreground transition-colors"
+						>
+							Política de Privacidad
+						</Link>
+						<Link
+							to="/terminos"
+							className="hover:text-foreground transition-colors"
+						>
+							Términos del Servicio
+						</Link>
+					</div>
+				</div>
+			</footer>
 		</PublicLayout>
 	);
 }
