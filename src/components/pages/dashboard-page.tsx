@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { useSession } from "#/queries/auth";
 import { useProgress } from "#/queries/progress";
 import { useCategories } from "#/queries/categories";
@@ -46,7 +45,7 @@ export function DashboardPage() {
 
         <Card className="p-5 sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <CaduceusIcon size={32} className="text-primary" />
+            <img src="/logo.png" alt="Caduceo" className="h-10 w-auto" />
             <div>
               <p className="text-2xl font-bold">{categories?.length ?? 0}</p>
               <p className="text-sm text-muted-foreground">Especialidades</p>

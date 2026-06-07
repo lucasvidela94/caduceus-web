@@ -1,12 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 
 export function PublicLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<div className="flex min-h-screen flex-col bg-background">
 			<header className="flex h-14 items-center justify-between border-b bg-card px-4 md:px-8">
 				<Link to="/" className="flex items-center gap-2">
-					<CaduceusIcon size={24} className="text-primary" />
+					<img src="/logo.png" alt="Caduceo" className="h-7 w-auto" />
 					<span className="text-lg font-semibold tracking-tight">Caduceo</span>
 				</Link>
 				<nav className="flex items-center gap-4">

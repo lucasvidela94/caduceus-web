@@ -1,5 +1,4 @@
 import { Outlet, Link } from "@tanstack/react-router";
-import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { TooltipProvider } from "#/components/ui/tooltip";
 import { Button } from "#/components/ui/button";
 import { RefreshCw, Home } from "lucide-react";
@@ -17,7 +16,7 @@ export function RootErrorComponent({ error }: { error?: Error }) {
     <div className="flex min-h-screen items-center justify-center bg-background p-8">
       <div className="mx-auto max-w-sm text-center">
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-destructive/10">
-          <CaduceusIcon size={32} className="text-destructive" />
+          <img src="/logo.png" alt="Caduceo" className="h-10 w-auto" />
         </div>
         <h1 className="text-xl font-bold tracking-tight">Algo salió mal</h1>
         <p className="mt-2 text-sm text-muted-foreground">

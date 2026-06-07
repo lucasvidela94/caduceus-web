@@ -1,4 +1,3 @@
-import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import {
 	createFileRoute,
 	Outlet,
@@ -96,7 +95,7 @@ function AdminLayout() {
 				<SidebarHeader className="px-5 pt-8 pb-6">
 					<div className="flex items-center gap-3">
 						<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0A5C6A] text-white">
-							<CaduceusIcon size={20} />
+							<img src="/logo.png" alt="Caduceo" className="h-6 w-auto" />
 						</div>
 						<div>
 							<span className="text-xl font-bold tracking-tight text-sidebar-foreground">

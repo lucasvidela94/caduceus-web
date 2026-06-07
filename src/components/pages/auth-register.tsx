@@ -1,5 +1,4 @@
 import { Link, useRouter } from "@tanstack/react-router";
-import { CaduceusIcon } from "#/components/ui/caduceus-icon";
 import { Eye, EyeOff } from "lucide-react";
 import { useReducer, useState } from "react";
 import { z } from "zod";
@@ -80,7 +79,7 @@ export function RegisterPage() {
 					<CardContent className="px-7 pt-8 pb-6">
 						<div className="mb-7 text-center">
 							<div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 ring-1 ring-primary/10">
-								<CaduceusIcon size={24} className="text-primary" />
+								<img src="/logo.png" alt="Caduceo" className="h-10 w-auto" />
 							</div>
 							<h1 className="text-xl font-bold tracking-tight">
 								Creá tu cuenta
