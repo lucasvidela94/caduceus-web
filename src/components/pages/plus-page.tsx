@@ -56,7 +56,7 @@ export function PlusPage() {
         <div className="relative">
           <div className="mb-6 flex items-baseline gap-1">
             <span className="text-4xl font-bold">$</span>
-            <span className="text-5xl font-bold">15.000</span>
+            <span className="text-5xl font-bold">18.000</span>
             <span className="text-muted-foreground">/único pago</span>
           </div>
 
